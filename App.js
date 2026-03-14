@@ -20,7 +20,7 @@ function showTab(sectionId, btn) {
     tabBtn.classList.remove('active');
   });
 
-  // Mostrar la sección elegida
+  
   const target = document.getElementById(sectionId);
   if (target) {
     target.classList.add('active');
