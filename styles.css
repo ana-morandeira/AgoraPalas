@@ -40,7 +40,7 @@ body {
    ============================================= */
 .header {
   background: var(--white);
-  padding: 14px 24px;
+  padding: 6px 24px;          /* menos padding porque el PNG ya tiene espacio */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,9 +52,11 @@ body {
 }
 
 .header img {
-  height: 48px;
+  height: 64px;               /* más alto para que el logo se vea bien */
   width: auto;
   object-fit: contain;
+  /* recorta el espacio blanco sobrante del PNG */
+  margin: -8px 0;
 }
 
 /* =============================================
@@ -151,7 +153,7 @@ body {
   scrollbar-width: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   position: sticky;
-  top: 77px;
+  top: 65px;   /* ajustado al nuevo header más compacto */
   z-index: 99;
 }
 
@@ -414,7 +416,9 @@ body {
   flex-wrap: wrap;
 }
 
-
+/* =============================================
+   MISC
+   ============================================= */
 .divider {
   height: 1px;
   background: rgba(0, 0, 0, 0.07);
