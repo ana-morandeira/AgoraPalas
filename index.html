@@ -6,32 +6,19 @@
   <meta name="theme-color" content="#0179f4" />
   <meta name="description" content="Ágora Palas – Tu guía de bienvenida en Palas de Rei" />
   <title>Ágora Palas</title>
-
-  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json" />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Estilos externos -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════
-       HEADER — Logo Ágora Palas
-  ══════════════════════════════════════ -->
+  <!-- HEADER -->
   <header class="header">
     <img src="LogoAgora.png" alt="Ágora Palas" />
   </header>
 
-  <!-- ══════════════════════════════════════
-       HERO — Bienvenida multilingüe
-  ══════════════════════════════════════ -->
+  <!-- HERO -->
   <div class="hero">
     <p class="welcome-line">Benvido · Bienvenido · Welcome · Bem-vindo</p>
     <h1>Estás en<br />tu casa</h1>
@@ -47,9 +34,7 @@
     </div>
   </div>
 
-  <!-- ══════════════════════════════════════
-       NAV TABS
-  ══════════════════════════════════════ -->
+  <!-- NAV TABS -->
   <nav class="nav-tabs" id="navTabs">
     <button class="tab-btn" onclick="showTab('inicio', this)">🏠 Inicio</button>
     <button class="tab-btn" onclick="showTab('telefonos', this)">📞 Teléfonos</button>
@@ -58,21 +43,14 @@
     <button class="tab-btn" onclick="showTab('ocio', this)">🗺️ Ocio</button>
   </nav>
 
-  <!-- ══════════════════════════════════════
-       SECCIÓN: INICIO
-  ══════════════════════════════════════ -->
+  <!-- ══ INICIO ══ -->
   <section class="section" id="inicio">
-
     <div class="info-banner">
       <h3>¡Bienvenido a Palas de Rei!</h3>
-      <p>Bem-vindo! / Welcome! — Aquí encontrarás todo lo que necesitas
-        para disfrutar tu estancia: dónde comer, desayunar,
-        qué visitar y los teléfonos de emergencia.</p>
+      <p>Bem-vindo! / Welcome! — Aquí encontrarás todo lo que necesitas para disfrutar tu estancia: dónde comer, desayunar, qué visitar y los teléfonos de emergencia.</p>
     </div>
-
     <p class="section-title">¿Qué buscas?</p>
     <p class="section-subtitle">Acceso rápido · Quick access</p>
-
     <div class="welcome-grid">
       <div class="welcome-tile" onclick="goToSection('telefonos', 1)">
         <div class="tile-icon">🆘</div>
@@ -95,7 +73,6 @@
         <div class="tile-sub">Cultura y naturaleza</div>
       </div>
     </div>
-
     <div class="divider"></div>
     <p class="section-title" style="margin-bottom: 16px">Camino de Santiago</p>
     <div class="card" style="cursor: default">
@@ -108,25 +85,26 @@
       </div>
       <span class="card-badge badge-blue">Camino</span>
     </div>
-
   </section>
 
-  <!-- ══════════════════════════════════════
-       SECCIÓN: TELÉFONOS
-  ══════════════════════════════════════ -->
+  <!-- ══ TELÉFONOS ══ -->
   <section class="section" id="telefonos">
-
     <p class="section-title">Teléfonos de interés</p>
     <p class="section-subtitle">Useful phone numbers · Números úteis</p>
 
+    <!-- PAC Urgencias -->
     <div class="emergency-card">
       <div class="e-info">
         <h4>🚨 PAC Urgencias / Emergency</h4>
         <p>982 37 41 32</p>
       </div>
-      <a class="call-btn red" href="tel:982374132">📞 Llamar</a>
+      <div class="card-actions">
+        <a class="call-btn red" href="tel:982374132">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/6GviTPUn3e4egD876" target="_blank">📍</a>
+      </div>
     </div>
 
+    <!-- Farmacias -->
     <div class="pharmacy-card">
       <div class="card-left">
         <div class="card-icon">💊</div>
@@ -137,11 +115,14 @@
       </div>
       <div class="pharmacy-btns">
         <a class="call-btn secondary" href="tel:982380108">📞 982 38 01 08</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/csrsyt6NSGNjgpJa6" target="_blank">📍 Farmacia 1</a>
         <a class="call-btn secondary" href="tel:982380142">📞 982 38 01 42</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/DRAGzpB6vXdQ1AbBA" target="_blank">📍 Farmacia 2</a>
       </div>
     </div>
 
-    <a class="card" href="tel:625243379">
+    <!-- Taxis -->
+    <div class="card">
       <div class="card-left">
         <div class="card-icon">🚕</div>
         <div>
@@ -149,21 +130,29 @@
           <div class="card-detail">625 24 33 79</div>
         </div>
       </div>
-      <span class="call-btn">📞 Llamar</span>
-    </a>
+      <div class="card-actions">
+        <a class="call-btn" href="tel:625243379">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/Vfiv73ocuQiyJNeC6" target="_blank">📍</a>
+      </div>
+    </div>
 
-    <a class="card" href="tel:981503431">
+    <!-- Oficina de Turismo -->
+    <div class="card">
       <div class="card-left">
         <div class="card-icon tourism">🗺️</div>
         <div>
           <div class="card-name">Oficina de Turismo</div>
-          <div class="card-detail">Tourist Office · Turismo · 981 50 34 31</div>
+          <div class="card-detail">Tourist Office · 981 50 34 31</div>
         </div>
       </div>
-      <span class="call-btn">📞 Llamar</span>
-    </a>
+      <div class="card-actions">
+        <a class="call-btn" href="tel:981503431">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/ybC87C5YJPYFB3Yz6" target="_blank">📍</a>
+      </div>
+    </div>
 
-    <a class="card" href="tel:982380001">
+    <!-- Ayuntamiento -->
+    <div class="card">
       <div class="card-left">
         <div class="card-icon hall">🏛️</div>
         <div>
@@ -171,84 +160,126 @@
           <div class="card-detail">982 38 00 01</div>
         </div>
       </div>
-      <span class="call-btn">📞 Llamar</span>
-    </a>
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982380001">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/596DAqHLFHw9rJNZ9" target="_blank">📍</a>
+      </div>
+    </div>
 
   </section>
 
-  <!-- ══════════════════════════════════════
-       SECCIÓN: COMER
-  ══════════════════════════════════════ -->
+  <!-- ══ COMER ══ -->
   <section class="section" id="comer">
-
     <p class="section-title">Dónde comer en Palas</p>
     <p class="section-subtitle">Where to eat · Onde comer · Dove mangiare</p>
 
-    <a class="card" href="tel:982374132">
+    <!-- A Reloxería -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🍷</div><div><div class="card-name">A Reloxería</div><div class="card-detail">982 37 41 32</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:630717904">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982374132">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/Ezoo94ozYbCToJkm8" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Eira -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🥗</div><div><div class="card-name">Eira</div><div class="card-detail">630 71 79 04</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:982374066">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:630717904">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/SVn4xwCrFvKUVije6" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Pulpería Casa Camiño -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🐙</div><div><div class="card-name">Pulpería Casa Camiño</div><div class="card-detail">982 37 40 66</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:982380361">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982374066">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/Uqi8NV3ENEqF89Gy7" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Pulpería A Nosa Terra -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🐙</div><div><div class="card-name">Pulpería A Nosa Terra</div><div class="card-detail">982 38 03 61</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:982380044">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982380361">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/whC4Dh89Njx9Eq998" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Casa Curro -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🏡</div><div><div class="card-name">Casa Curro</div><div class="card-detail">982 38 00 44</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982380044">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/MUHB9hL2XdAcwdte6" target="_blank">📍</a>
+      </div>
+    </div>
 
   </section>
 
-  <!-- ══════════════════════════════════════
-       SECCIÓN: DESAYUNAR
-  ══════════════════════════════════════ -->
+  <!-- ══ DESAYUNAR ══ -->
   <section class="section" id="desayunar">
-
     <p class="section-title">Dónde desayunar</p>
     <p class="section-subtitle">Breakfast spots · Pequeno-almoço · Colazione</p>
 
-    <a class="card" href="tel:982374189">
+    <!-- Pastelería Dulce Maria -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🥐</div><div><div class="card-name">Pastelería Dulce Maria</div><div class="card-detail">982 37 41 89</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:630717904">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982374189">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/9we3BWBBb6JUNyzH9" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Britania -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">☕</div><div><div class="card-name">Britania</div><div class="card-detail">630 71 79 04</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:982374066">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:630717904">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/vG2v3RjGLnBE9qDx5" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Pulpería Casa Camiño -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🐙</div><div><div class="card-name">Pulpería Casa Camiño</div><div class="card-detail">982 37 40 66</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:982380093">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982374066">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/Uqi8NV3ENEqF89Gy7" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Café Bar Juventud -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🎯</div><div><div class="card-name">Café Bar Juventud</div><div class="card-detail">982 38 00 93</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
-    <a class="card" href="tel:982380044">
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982380093">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/vuZEbHXWhGSz9gQ19" target="_blank">📍</a>
+      </div>
+    </div>
+
+    <!-- Casa Bar Central -->
+    <div class="card">
       <div class="card-left"><div class="card-icon">🏠</div><div><div class="card-name">Casa Bar Central</div><div class="card-detail">982 38 00 44</div></div></div>
-      <span class="call-btn">📞</span>
-    </a>
+      <div class="card-actions">
+        <a class="call-btn" href="tel:982380044">📞</a>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/utWP2G5u9o8CoUVi8" target="_blank">📍</a>
+      </div>
+    </div>
 
   </section>
 
-  <!-- ══════════════════════════════════════
-       SECCIÓN: OCIO
-  ══════════════════════════════════════ -->
+  <!-- ══ OCIO ══ -->
   <section class="section" id="ocio">
-
     <p class="section-title">Tiempo libre</p>
     <p class="section-subtitle">Enjoy your free time · Tempo livre</p>
 
     <p class="cat-label">🏛️ Cultura · Culture · Cultura</p>
 
-    <a class="card" href="https://www.google.com/maps/search/Castillo+de+Pambre" target="_blank">
+    <div class="card">
       <div class="card-left">
         <div class="card-icon culture">🏰</div>
         <div>
@@ -256,10 +287,13 @@
           <div class="card-detail">Pambre Castle · Castelo de Pambre</div>
         </div>
       </div>
-      <span class="card-badge badge-orange">Cultura</span>
-    </a>
+      <div class="card-actions">
+        <span class="card-badge badge-orange">Cultura</span>
+        <a class="call-btn secondary" href="https://www.google.com/maps/search/Castillo+de+Pambre" target="_blank">📍</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://www.google.com/maps/search/Iglesia+Vilar+de+Donas" target="_blank">
+    <div class="card">
       <div class="card-left">
         <div class="card-icon culture">⛪</div>
         <div>
@@ -267,13 +301,16 @@
           <div class="card-detail">Vilar de Donas Church · Igreja</div>
         </div>
       </div>
-      <span class="card-badge badge-orange">Cultura</span>
-    </a>
+      <div class="card-actions">
+        <span class="card-badge badge-orange">Cultura</span>
+        <a class="call-btn secondary" href="https://www.google.com/maps/search/Iglesia+Vilar+de+Donas" target="_blank">📍</a>
+      </div>
+    </div>
 
     <div class="divider"></div>
     <p class="cat-label">🌿 Naturaleza · Nature · Natureza</p>
 
-    <a class="card" href="https://www.google.com/maps/search/Paseo+Roxan+Palas+de+Rei" target="_blank">
+    <div class="card">
       <div class="card-left">
         <div class="card-icon nature">🌳</div>
         <div>
@@ -281,10 +318,13 @@
           <div class="card-detail">Roxán Natural Walk · Percurso Natural</div>
         </div>
       </div>
-      <span class="card-badge badge-green">Naturaleza</span>
-    </a>
+      <div class="card-actions">
+        <span class="card-badge badge-green">Naturaleza</span>
+        <a class="call-btn secondary" href="https://www.google.com/maps/search/Paseo+Roxan+Palas+de+Rei" target="_blank">📍</a>
+      </div>
+    </div>
 
-    <a class="card" href="https://www.google.com/maps/search/Torrentes+Macara+Galicia" target="_blank">
+    <div class="card">
       <div class="card-left">
         <div class="card-icon nature">💧</div>
         <div>
@@ -292,13 +332,16 @@
           <div class="card-detail">Mácara Rapids · Quedas d'água</div>
         </div>
       </div>
-      <span class="card-badge badge-green">Naturaleza</span>
-    </a>
+      <div class="card-actions">
+        <span class="card-badge badge-green">Naturaleza</span>
+        <a class="call-btn secondary" href="https://www.google.com/maps/search/Torrentes+Macara+Galicia" target="_blank">📍</a>
+      </div>
+    </div>
 
     <div class="divider"></div>
     <p class="cat-label">🎶 Ocio · Leisure · Lazer</p>
 
-    <div class="card" style="cursor: default">
+    <div class="card">
       <div class="card-left">
         <div class="card-icon leisure">🎵</div>
         <div>
@@ -306,21 +349,20 @@
           <div class="card-detail">Musical-Bar · Ocio / Leisure / Lazer</div>
         </div>
       </div>
-      <span class="card-badge badge-purple">Ocio</span>
+      <div class="card-actions">
+        <span class="card-badge badge-purple">Ocio</span>
+        <a class="call-btn secondary" href="https://maps.app.goo.gl/DH9mfniZMwnenjbA9" target="_blank">📍</a>
+      </div>
     </div>
 
   </section>
 
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     Ágora Palas · Apartamentos Turísticos<br />
     Palas de Rei, Galicia
   </footer>
 
-  <!-- JavaScript -->
   <script src="app.js"></script>
-
 </body>
 </html>
