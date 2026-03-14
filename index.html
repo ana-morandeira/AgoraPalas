@@ -17,7 +17,7 @@
     rel="stylesheet"
   />
 
-  <!-- Estilos -->
+  <!-- Estilos externos -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,7 +26,8 @@
        HEADER — Logo Ágora Palas
   ══════════════════════════════════════ -->
   <header class="header">
-    <img src="LogoAgora.png" alt="Ágora Palas Logo" class="logo" />
+    <img src="LogoAgora.png" alt="Ágora Palas" />
+  </header>
 
   <!-- ══════════════════════════════════════
        HERO — Bienvenida multilingüe
@@ -64,17 +65,14 @@
 
     <div class="info-banner">
       <h3>¡Bienvenido a Palas de Rei!</h3>
-      <p>
-        Bem-vindo! / Welcome! — Aquí encontrarás todo lo que necesitas
+      <p>Bem-vindo! / Welcome! — Aquí encontrarás todo lo que necesitas
         para disfrutar tu estancia: dónde comer, desayunar,
-        qué visitar y los teléfonos de emergencia.
-      </p>
+        qué visitar y los teléfonos de emergencia.</p>
     </div>
 
     <p class="section-title">¿Qué buscas?</p>
     <p class="section-subtitle">Acceso rápido · Quick access</p>
 
-    <!-- Tiles de acceso rápido — goToSection(sectionId, tabIndex) -->
     <div class="welcome-grid">
       <div class="welcome-tile" onclick="goToSection('telefonos', 1)">
         <div class="tile-icon">🆘</div>
@@ -121,7 +119,6 @@
     <p class="section-title">Teléfonos de interés</p>
     <p class="section-subtitle">Useful phone numbers · Números úteis</p>
 
-    <!-- Urgencias -->
     <div class="emergency-card">
       <div class="e-info">
         <h4>🚨 PAC Urgencias / Emergency</h4>
@@ -130,7 +127,6 @@
       <a class="call-btn red" href="tel:982374132">📞 Llamar</a>
     </div>
 
-    <!-- Farmacias -->
     <div class="pharmacy-card">
       <div class="card-left">
         <div class="card-icon">💊</div>
@@ -145,7 +141,6 @@
       </div>
     </div>
 
-    <!-- Taxi -->
     <a class="card" href="tel:625243379">
       <div class="card-left">
         <div class="card-icon">🚕</div>
@@ -157,7 +152,6 @@
       <span class="call-btn">📞 Llamar</span>
     </a>
 
-    <!-- Turismo -->
     <a class="card" href="tel:981503431">
       <div class="card-left">
         <div class="card-icon tourism">🗺️</div>
@@ -169,7 +163,6 @@
       <span class="call-btn">📞 Llamar</span>
     </a>
 
-    <!-- Ayuntamiento -->
     <a class="card" href="tel:982380001">
       <div class="card-left">
         <div class="card-icon hall">🏛️</div>
@@ -183,6 +176,9 @@
 
   </section>
 
+  <!-- ══════════════════════════════════════
+       SECCIÓN: COMER
+  ══════════════════════════════════════ -->
   <section class="section" id="comer">
 
     <p class="section-title">Dónde comer en Palas</p>
